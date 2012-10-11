@@ -2,5 +2,4 @@
 
 require 'notorious'
 
-puts "B.I.G."
-# Notorious.make(ARGV[0])
+Notorious.render(ARGV[0])

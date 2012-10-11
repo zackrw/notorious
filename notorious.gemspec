@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "notorious"
   gem.require_paths = ["lib"]
   gem.version       = Notorious::VERSION
+
+  gem.add_dependency("redcarpet", "~> 2.1.0")
 end
