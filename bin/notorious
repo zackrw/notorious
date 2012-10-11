@@ -1,0 +1,6 @@
+#! /usr/bin/env ruby
+
+require 'notorious'
+
+puts "B.I.G."
+# Notorious.make(ARGV[0])

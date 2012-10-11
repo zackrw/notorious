@@ -1,0 +1,12 @@
+Get notorious to work on my local machine
+Add option parsing
+Add --help command
+Add -s command to specify custom stylesheet
+Publish to rubygems
+Add `notorious publish file_name project_name`, which publishes notes to a
+  server (e.g. notorious.com/public/x)
+  by posting to notorious.com/new with content == the markdown
+  The MD is converted to html and stored in a DB under the appropriate keyname,
+  to be served on request. Then, notorious gets a 200 with the url, and says
+  THANKS! your site is now hosted at notorious.com/public/project_name
+
