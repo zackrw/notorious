@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type='text/css'>
+    html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+color:#444;
+font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+font-size:13px;
+line-height:1.5em;
+padding:1em;
+margin:auto;
+max-width:48em;
+background:#fefefe;
+}
+
+a{ color: #08E; text-decoration:none;}
+a:visited{ color: #08E; }
+a:hover{ color: #C33; }
+a:active{ color:#C33; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:0.5em 1em;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+font-family:"Helvetica Neue", Helvetica, sans-serif;
+color:#111;
+line-height:1em;
+margin-bottom: 0.5em;
+}
+
+
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; color: #DD3530; margin-left: -0.5em; }
+h2{ font-size:1.7em; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+pre, code, kbd, samp { color: #000; font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 0.98em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+  </style>
+  <title>Tech Notes</title>
+</head>
+<body>
+  <h1>Structures</h1>
+
+<h2>Bag</h2>
+
+<h2>Queue</h2>
+
+<h2>Stack</h2>
+
+<h2>HashTable</h2>
+
+<h2>Graph</h2>
+
+<h2>Array</h2>
+
+<h2>LinkedList</h2>
+
+<h2>Heap</h2>
+
+<h2>Priority Queue</h2>
+
+<h2>Tree</h2>
+
+<h2>Trie</h2>
+
+<h2>Set</h2>
+
+<h2>String</h2>
+
+<h1>Sort</h1>
+
+<h2>Browsers</h2>
+
+<p>Apparently Firefox uses mergesort, while WebKit uses selection sort...what?</p>
+
+<h2>Merge</h2>
+
+<p>If sequence length != 1, Divide the sequence into two sequences. Recurse. Call
+the merge function on each pair of lists. What merge does is compares the first
+element of each list, takes the smaller, and appends it to a new result list.
+This sorts.
+here is a link <a href="http://www.google.com/">My cool Link</a></p>
+
+<ul>
+<li>Worst: O(n log(n))</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>bucket</h2>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>Quick</h2>
+
+<h2>Insertion</h2>
+
+<p>Treat the first element as sorted. Starting from the second element, put it where it belongs in the sorted section. Move on to the next and increment number sorted. O(n^2)</p>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>heapsort</h2>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>counting</h2>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>radix</h2>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>median</h2>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>selection</h2>
+
+<p>Find the minimum value. Swap it with the first element in the list. Repeat this for the rest of the list. O(n^2).</p>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>bubble sort</h2>
+
+<p>Make multiple passes through the list (n passes). For each pass, test each pair of adjacent numbers and switch them if they should be switched. O(n^2)</p>
+
+<ul>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h1>Search (array)</h1>
+
+<h2>binary</h2>
+
+<p>store the interval youre searching. Look at the middle element. Match =&gt; return it. Less than =&gt; new interval is everything above it. More than =&gt; new interval is everything below it.</p>
+
+<ul>
+<li>Constraints: Must be sorted, O(log(n))</li>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>linear (sequential)</h2>
+
+<p>Starting at the beginning, look at each element until you find the desired one.</p>
+
+<ul>
+<li>Constraints: none</li>
+<li>Worst: O(n)</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>hash-based</h2>
+
+<ul>
+<li>Constraints:</li>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h2>binary tree</h2>
+
+<ul>
+<li>Constraints:</li>
+<li>Worst:</li>
+<li>Best:</li>
+<li>Average:</li>
+<li>Space:</li>
+</ul>
+
+<h1>Search (graph)</h1>
+
+<h2>depth-first</h2>
+
+<h2>breadth-first</h2>
+
+<h1>Algorithms</h1>
+
+<h2>Djikstra\s algorithm</h2>
+
+<h2>A*</h2>
+
+<h2>Bit manipulation</h2>
+
+<h2>Bidirectional Search</h2>
+
+<p>Do a search from start to end and from end to start at the same time.
+Stop when they meet in the middle.</p>
+
+<h1>Terms</h1>
+
+<h2>Perfect Hashing</h2>
+
+<h2>Dynamic Programming</h2>
+
+<h2>Recursion</h2>
+
+<h1>Acronyms/Terms</h1>
+
+<h2>DHCP</h2>
+
+<p>Dynamic Host Configuration Protocol. How an internet client gets its configuration information in order to connect to the internet. The DHCP client (e.g. your comp) queries a DHCP server for info (e.g. an IP address) and then uses that to make web requests.</p>
+
+<h2>SOAP</h2>
+
+<p>Simple Object Access Protocol. A protocol for accessing resources on the Internet. Uses XML</p>
+
+<h2>REST</h2>
+
+<p>Representational State Transfer. A web architecture, or series of standards that outline how one should organize HTTP requests (sort of CRUD). It&#39;s based on the idea that you make requests when you want to transition state. Not as strict as SOAP, doesn&#39;t require a special header.</p>
+
+<h2>ETL</h2>
+
+<p>Extract Transform Load. The process of extracting data from a source, transforming it to fit new organizational needs, and loading it into a new system.</p>
+
+<h2>SAN</h2>
+
+<p>Storage Area Network. Basically a shared storage space to access shared resources. A general term that encompasses Shared disks, filesystems, etc.</p>
+
+<h2>DMZ</h2>
+
+<p>comes from &quot;Demilitarized Zone.&quot; Also known as perimeter networking, its a physical or logical subnetwork that contains and exposes external-facing services to a larger, potentially untrusted network (e.g. API). </p>
+
+<h2>Honeypot</h2>
+
+<p>A trap set to catch attempted hacking, usually by pretending an area is part of a network, when actually it is monitored</p>
+
+<h2>XSS</h2>
+
+<p>Cross site scripting. An exploitation of a security vulnerability that allows an attacker to inject client-side code into an application. (e.g. not escaping html in a form =&gt; <input type="password" placeholder="give me your money" />)</p>
+
+<h2>DNS</h2>
+
+<p>Domain Name System.</p>
+
+<h2>BigTable</h2>
+
+<h2>MapReduce</h2>
+
+<h2>Sticky Bit</h2>
+
+<h2>OLTP</h2>
+
+<h2>OLAP</h2>
+
+<h1>Favorite technology about company X</h1>
+
+<h2>Google</h2>
+
+<h2>Github</h2>
+
+<h2>Dropbox</h2>
+
+</body>
+</html>

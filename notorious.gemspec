@@ -9,11 +9,14 @@ Gem::Specification.new do |gem|
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
-  gem.executables   = ["notorious"] # gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.executables   = ["notorious"]
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "notorious"
   gem.require_paths = ["lib"]
   gem.version       = Notorious::VERSION
 
   gem.add_dependency("redcarpet", "~> 2.1.0")
+  gem.add_dependency("giant_client", "~> 0.1.0")
+
+  gem.add_development_dependency 'rspec'
 end

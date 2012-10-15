@@ -12,3 +12,9 @@ Add `notorious publish file_name project_name`, which publishes notes to a
   THANKS! your site is now hosted at notorious.com/public/project_name
   Make sure to lower case and remove spaces for the url / db record, but save
   them for the title, which will appear in the title bar
+
+
+STYLE
+  inset quill in top right
+  header with title (-t flag)
+
