@@ -52,11 +52,16 @@ Or install it yourself as:
     * Now there are 50 states
     * Alabama - Montgomery
     * Alaska - Juneau
-    * _etc..
+    * etc..
 
 ###Then call notorious
 
     $ notorious build notes.md
+
+###And see your fancy notes
+
+![Example Output](https://github.com/zackrw/notorious/tree/v1/spec/examples/example.png)
+
 
 ###To run this example
 
