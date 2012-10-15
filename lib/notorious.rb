@@ -1,7 +1,6 @@
 require "notorious/version"
 require "optparse"
 require "redcarpet"
-require "giant_client"
 
 
 

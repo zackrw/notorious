@@ -101,19 +101,29 @@ Or install it yourself as:
     * Wisconsin - Madison
     * Wyoming - Cheyenne
 
-Then call notorious
+###Then call notorious
 
     $ notorious build notes.md
 
-
-
-To run this example
+###To run this example
 
     $ notorious example
 
-Options
+###Options
 
     $ notorious --help
+    Usage: notorious [options] [action] file
+
+    actions:
+        build [file]                     The markdown file to build.
+
+        options:
+        -o, --output [file]              Specify output file name (defaults to input_file.html)
+        -s, --stylesheet [file]          Specify a custom stylesheet
+        -v, --verbose                    Run verbosely
+
+###Testing
+    $ make test
 
 ## Contributing
 

@@ -33,6 +33,7 @@ def parse
 
   end
   opts.parse!
+  options
 end
 
 # Parse options
@@ -42,30 +43,31 @@ options = parse
 unless ARGV[0]
   puts "Notorious. Run `notorious --help` for details"
 end
-options[:file_name] = ARGV[1] || raise(ArgumentError, "you must specify a file to build")
+
+if ARGV[0] == 'build' && !ARGV[1]
+  raise(ArgumentError, "you must specify a file to build")
+end
+
+case ARGV[0]
+when 'build'
+  options[:file_name] = ARGV[1] || raise(ArgumentError, "you must specify a file to build")
+when 'example'
+  options[:file_name] = File.expand_path("../../spec/examples/example_notes.md", __FILE__)
+else
+  raise ArgumentError, "you have specified an invalid command"
+end
 
 # must be a markdown file
 Notorious.validate_extension(options[:file_name], ["md", "mdown", "markdown", "Markdown"])
 
-options[:stylesheet] ||= 'default.css'
+options[:stylesheet] ||= File.expand_path("../../stylesheets/default.css", __FILE__)
+
 unless options[:output]
   split = options[:file_name].split('.')
   split.pop if split.length > 1
   options[:output] = split.push('html').join('.')
 end
 
-# read in the stylesheet
-options[:stylesheet] = File.expand_path("../../stylesheets/#{options[:stylesheet]}", __FILE__)
-
 
 # Decide what to call
-case ARGV[0]
-when "build"
-  Notorious.build(options)
-when "publish"
-  #Notorious.publish(file_name, styles_path, output)
-else
-  raise ArgumentError, "you have specified an invalid command"
-end
-
-
+Notorious.build(options)

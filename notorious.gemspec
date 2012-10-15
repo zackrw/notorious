@@ -16,7 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Notorious::VERSION
 
   gem.add_dependency("redcarpet", "~> 2.1.0")
-  gem.add_dependency("giant_client", "~> 0.1.0")
 
   gem.add_development_dependency 'rspec'
 end
