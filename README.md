@@ -66,6 +66,13 @@ Or install it yourself as:
 
     $ notorious example
 
+###If notorious can't open your notes
+When you call notorious build, notorious creates an html file (by default the same
+directory as the markdown file). If notorious cannot open your newly made notes,
+notorious will output their location, and you may open the file on your own in
+your favorite browser.
+
+
 ###Options
 
     $ notorious --help
