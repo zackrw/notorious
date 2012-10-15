@@ -60,8 +60,7 @@ Or install it yourself as:
 
 ###And see your fancy notes
 
-![Example Output](https://github.com/zackrw/notorious/tree/v1/spec/examples/example.png)
-
+![Example Output](https://raw.github.com/zackrw/notorious/v1/spec/examples/example.png)
 
 ###To run this example
 
