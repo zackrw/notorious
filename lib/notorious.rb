@@ -14,7 +14,7 @@ module Notorious
 
 
     # make the html
-    html = self.render(file_name, stylesheet)
+    html = self.render(file_name, title, stylesheet)
 
     # write to the output file
     outfile = File.new(File.expand_path(output), 'w')
@@ -33,7 +33,7 @@ module Notorious
     end
   end
 
-  def self.render(file_name, stylesheet)
+  def self.render(file_name, title, stylesheet)
     begin
       styles = File.new(stylesheet, 'r').read
     rescue
