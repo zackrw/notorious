@@ -27,6 +27,11 @@ def parse
       options[:stylesheet] = s
     end
 
+    opts.on("-t", "--title [name]", String,
+      "Specify a title") do |t|
+      options[:title] = t
+    end
+
     opts.on("-v", "--verbose", "Run verbosely") do |v|
       options[:verbose] = v
     end
