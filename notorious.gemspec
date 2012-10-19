@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["z.reneau.wedeen@gmail.com"]
   gem.description   = %q{Notorious allows you to take notes in pure Markdown and review them in your browser.}
   gem.summary       = %q{Notorious, the Markdown note taker}
-  gem.homepage      = ""
+  gem.homepage      = "http://github.com/zackrw/notorious"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = ["notorious"]
