@@ -6,7 +6,7 @@ require "redcarpet"
 module Notorious
 
   def self.build(opts)
-    file_name = opts[:file_name]
+    file_names = opts[:file_names]
     stylesheet = opts[:stylesheet]
     title = opts[:title]
     output = opts[:output]
@@ -14,7 +14,7 @@ module Notorious
 
 
     # make the html
-    html = self.render(file_name, title, stylesheet)
+    html = self.render(file_names, title, stylesheet)
 
     # write to the output file
     outfile = File.new(File.expand_path(output), 'w')
@@ -33,25 +33,29 @@ module Notorious
     end
   end
 
-  def self.render(file_name, title, stylesheet)
+  def self.render(file_names, title, stylesheet)
     begin
       styles = File.new(stylesheet, 'r').read
     rescue
       raise RuntimeError, "Could not load the stylesheet. Make sure there is a file at #{stylesheet}"
     end
 
-    # read in and convert the markdown file
-    begin
-      md_file = File.new(file_name, 'r')
-    rescue
-      raise ArgumentError, "Could not find the file you specified: #{file_name}"
-    end
+    body = ""
 
-    # convert markdown to HTML
-    md_contents = md_file.read
-    md = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    body = md.render(md_contents)
-    md_file.close
+    file_names.each do |f|
+      # read in and convert the markdown file
+      begin
+        md_file = File.new(f, 'r')
+      rescue
+        raise ArgumentError, "Could not find the file you specified: #{f}"
+      end
+
+      # convert markdown to HTML
+      md_contents = md_file.read
+      md = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+      body += md.render(md_contents)
+      md_file.close
+    end
 
     self.html(styles, title, body)
   end

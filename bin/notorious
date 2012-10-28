@@ -36,6 +36,10 @@ def parse
       options[:verbose] = v
     end
 
+    opts.on("--version", "Print Version") do |v|
+      options[:version] = v
+    end
+
   end
   opts.parse!
   options
@@ -43,6 +47,11 @@ end
 
 # Parse options
 options = parse
+
+if options[:version]
+  puts "Notorious: version #{Notorious::VERSION}"
+  exit
+end
 
 # assign arguments
 unless ARGV[0]
@@ -55,22 +64,30 @@ end
 
 case ARGV[0]
 when 'build'
-  options[:file_name] = ARGV[1] || raise(ArgumentError, "you must specify a file to build")
+  options[:file_names] = ARGV[1..-1]
+  raise(ArgumentError, "you must specify a file to build") if options[:file_names].length == 0
 when 'example'
-  options[:file_name] = File.expand_path("../../spec/examples/example_notes.md", __FILE__)
+  options[:file_names] = [File.expand_path("../../spec/examples/example_notes.md", __FILE__)]
 else
   raise ArgumentError, "you have specified an invalid command"
 end
 
-# must be a markdown file
-Notorious.validate_extension(options[:file_name], ["md", "mdown", "markdown", "Markdown"])
+# must be a markdown files
+options[:file_names].each do |f|
+  Notorious.validate_extension(f, ["md", "mdown", "markdown", "Markdown"])
+end
 
 options[:stylesheet] ||= File.expand_path("../../stylesheets/default.css", __FILE__)
 
 unless options[:output]
-  split = options[:file_name].split('.')
-  split.pop if split.length > 1
-  options[:output] = split.push('html').join('.')
+  if options[:file_names].length == 1
+    file_name = options[:file_names][0]
+    split = file_name.split('.')
+    split.pop if split.length > 1
+    options[:output] = split.push('html').join('.')
+  else
+    options[:output] = 'multiple_files.html'
+  end
 end
 
 

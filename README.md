@@ -62,6 +62,13 @@ Or install it yourself as:
 
 ![Example Output](https://raw.github.com/zackrw/notorious/v1/spec/examples/example.png)
 
+###Opening Multiple Files
+*If you specify multiple files to `build`, notorious will concatenate them and
+make an output file called "multiple_files.html" in your current working
+directory (unless you specify a -o)*
+
+    $ notorious build notes.md other_notes.md
+
 ###To run this example
 
     $ notorious example
